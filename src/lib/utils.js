@@ -54,7 +54,7 @@ export const generateUsername = () => {
 	const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
 	const id = randomBytes(2).toString('hex');
 
-	return `${randomAdjective}-${randomNoun}${id}`;
+	return `${randomAdjective}-${randomNoun}-${id}`;
 };
 
 export const getImageURL = (collectionId, recordId, fileName, size = '0x0') => {
