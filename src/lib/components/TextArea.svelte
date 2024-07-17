@@ -10,14 +10,12 @@
 	export let errors;
 </script>
 
-<div class="form-control mb-2 w-full max-w-lg">
+<div class="form-control w-full max-w-lg">
 	<label for={id} class="label pb-1 font-medium">
 		<span class="label-text">{label}</span>
 	</label>
-	<input
-		class={type === 'file'
-			? 'file-input file-input-bordered w-full max-w-lg'
-			: 'input input-bordered w-full max-w-lg'}
+	<textarea
+		class="textarea textarea-bordered h-24 resize-none"
 		{type}
 		{placeholder}
 		{required}
@@ -26,7 +24,6 @@
 		name={id}
 		{value}
 	/>
-
 	{#if errors}
 		{#each errors as error}
 			<label for={id} class="label py-0 pb-1">
